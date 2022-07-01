@@ -1,12 +1,14 @@
 pipeline {
-    agent {
-        
+    environment {
+        MSG = "Building!"
     }
+
+    agent none
     stages {
-        stage('Build') { 
-            steps {
-                sh 'npm install' 
+	    stage("Build") {
+			steps {
+                sh "echo ${MSG}"
             }
-        }
+	    }
     }
 }
