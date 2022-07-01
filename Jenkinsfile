@@ -3,7 +3,7 @@ pipeline {
         MSG = "Building!"
     }
 
-    agent none
+    agent any
     stages {
 	    stage("Build") {
 			steps {
